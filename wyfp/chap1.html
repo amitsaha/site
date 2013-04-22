@@ -1,0 +1,663 @@
+
+<!DOCTYPE html><html>
+<head>
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"/>
+    
+        <title>Chapter 1: Getting Started &mdash; Write Your First Program: Amit Saha, Prentice Hall India Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="_static/sphinx-bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css"/>
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+        <script type="text/javascript">
+            var DOCUMENTATION_OPTIONS = {
+                URL_ROOT:'',
+                VERSION:'1.0',
+                COLLAPSE_INDEX:false,
+                FILE_SUFFIX:'.html',
+                HAS_SOURCE:  true
+            };
+        </script>
+            <script type="text/javascript" src="_static/jquery.js"></script>
+            <script type="text/javascript" src="_static/underscore.js"></script>
+            <script type="text/javascript" src="_static/doctools.js"></script>
+            <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            <script type="text/javascript" src="_static/bootstrap-dropdown.js"></script>
+            <link rel="search" title="Search" href="search.html"/>
+        <link rel="top" title="Write Your First Program: Amit Saha, Prentice Hall India Learning" href="index.html"/>
+            <link rel="next" title="Chapter 2: Variables, Memory Allocation and Pointers" href="chap2.html"/>
+            <link rel="prev" title="Book Website" href="index.html"/> 
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    
+</head>
+<body>
+
+    <div class="navbar navbar-static-top">
+        <div class="navbar-inner">
+            <div class="container">
+
+    <div class="related">
+        <ul class="nav">
+                <li class=""><a class="brand" href="index.html">Write Your First Program</a></li>
+                <li>
+                    <a href="genindex.html"
+                       title="General Index" accesskey="I">index</a>
+                </li>
+                <li>
+                    <a href="chap2.html"
+                       title="Chapter 2: Variables, Memory Allocation and Pointers" accesskey="N">next</a>
+                </li>
+                <li>
+                    <a href="index.html"
+                       title="Book Website" accesskey="P">previous</a>
+                </li> 
+        </ul>
+    </div>
+                <div class="pull-right">
+                    
+        <form class="navbar-search" action="search.html"
+              method="get">
+            <input type="text" name="q" placeholder="search"/>
+            <input type="hidden" name="check_keywords" value="yes"/>
+            <input type="hidden" name="area" value="default"/>
+        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<ul class="quick-links">
+    <li><strong>Quick links</strong></li>
+    <li class="divider">&middot;</li>
+    <li class="follow-btn">
+        <a href="https://twitter.com/echorand"
+           class="twitter-follow-button" data-width="145px"
+           data-link-color="#0069D6" data-show-count="false">Follow
+            @echorand</a>
+    </li>
+    <li class="tweet-btn">
+        <a href="https://twitter.com/share" class="twitter-share-button"
+           data-url="http://www.phindia.com/saha" data-count="horizontal"
+           data-via="twbootstrap"
+           data-related="echorand:Creator of Write Your First Program">Tweet</a>
+    </li>
+    <li class="plusone-container">
+        <g:plusone size="medium"></g:plusone>
+    </li>
+</ul>  
+    <div class="container">
+        <div class="content row">
+                <div class="span9">
+                    
+  <div class="section" id="chapter-1-getting-started">
+<h1>Chapter 1: Getting Started<a class="headerlink" href="#chapter-1-getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+<div class="section" id="setting-up-microsoft-windows-7">
+<h2>Setting up Microsoft Windows 7<a class="headerlink" href="#setting-up-microsoft-windows-7" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="setting-up-cygwin-and-gcc-for-c-programming">
+<h3>Setting up Cygwin and gcc for C programming<a class="headerlink" href="#setting-up-cygwin-and-gcc-for-c-programming" title="Permalink to this headline">¶</a></h3>
+<p>In this screencast, I show you how you can setup <tt class="docutils literal"><span class="pre">gcc</span></tt> on Microsoft
+Windows 7 using Cygwin:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/F-FcvspXc1A" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>Next, I show how you can use Notepad++ to edit your C code and compile
+it using <tt class="docutils literal"><span class="pre">gcc</span></tt>:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/DwBDMNshnhc" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div></div>
+<div class="section" id="setting-up-python">
+<h3>Setting up Python<a class="headerlink" href="#setting-up-python" title="Permalink to this headline">¶</a></h3>
+<p>In the first screencast, we download the Python 2.7 installer, and install it:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/wnAsMQbCVXA" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>In the next screencast, we setup the Windows <tt class="docutils literal"><span class="pre">Path</span></tt> variable so that
+we can invoke the <tt class="docutils literal"><span class="pre">python</span></tt> executable from anywhere on the Windows
+command line:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/dU_ca27EGT8" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>In this screencast, I show you how you can use Notepad++ to edit
+Python code and run it using the <tt class="docutils literal"><span class="pre">python</span></tt> executable:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/8Q1faUbG470" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div></div>
+</div>
+<div class="section" id="setting-up-linux">
+<h2>Setting up Linux<a class="headerlink" href="#setting-up-linux" title="Permalink to this headline">¶</a></h2>
+<p>If you have got only Microsft Windows 7 installed on your computer, an easy way
+to try Linux is to install it in a virtual machine. In the first
+screencast, I show you how you can install Oracle VirtualBox on
+Windows 7:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/Xkw32QcjoSg" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>In the next two screencasts, I show you how to install <a class="reference external" href="http://fedoraproject.org">Fedora 18 Linux</a>
+on Windows using Oracle VirtualBox:</p>
+<p>Part - I:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/77LUaV7w12U" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>Part - II:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/tmTlpZbsMxs" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div><p>As you can see from the last screencast, Python 2.7 is already
+installed on Linux. To install <cite>gcc</cite>, you can use the command: <tt class="docutils literal"><span class="pre">yum</span> <span class="pre">-y</span> <span class="pre">install</span> <span class="pre">gcc</span></tt> either using <tt class="docutils literal"><span class="pre">sudo</span></tt> or as the root user.</p>
+<p>Fedora 18 comes with a program called <tt class="docutils literal"><span class="pre">gedit</span></tt> installed, which you
+can use to edit your programs. Here is a screencast to get you
+started:</p>
+<div style="padding-bottom: 45.000000%; padding-top: 30px; position: relative; width: 80%">
+<iframe src="http://www.youtube.com/embed/e2VlTgQr1PA" style="border: 0; height: 100%; left: 0; position: absolute; top: 0; width: 100%">
+</iframe></div></div>
+<div class="section" id="compilers-and-interpreters">
+<h2>Compilers and Interpreters<a class="headerlink" href="#compilers-and-interpreters" title="Permalink to this headline">¶</a></h2>
+<p>In the first chapter of the book, you learnt that programs written in
+high level languages have to be translated into a low level language
+using compilers. This low level language is either in a <cite>native</cite> form,
+in the sense that it is understood by the operating system itself, or
+in an <cite>intermediate</cite> form which is understood by an intermediary such
+as the <cite>bytecode interpreter</cite>. You also learnt that C is a compiled
+language, whereas Python is both compiled <cite>and</cite> interpreted. Here, I will
+try to explain these statements in more detail by carrying out
+experiments on Linux.</p>
+<p>The first program we wrote, <cite>helloworld.c</cite> looked like this:</p>
+<div class="highlight-c"><div class="highlight"><pre><span class="cp"># include&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>
+   <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+   <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We compiled and executed this program as follows (on Linux):</p>
+<div class="highlight-c"><pre>$ gcc -o helloworld helloworld.c
+$ ./helloworld
+Hello World</pre>
+</div>
+<p>The executable file <cite>helloworld</cite> is the low level language
+equivalent of the high level language program, <cite>helloworld.c</cite>. This is
+what the operating system on your computer understands and hence when it
+is executed or run, it prints <cite>Hello World</cite> on the screen. This process
+of converting <cite>helloworld.c</cite> to <cite>helloworld</cite> represents the
+<em>translation</em> process. In the case of C, this translation process is
+performed by the compiler, <cite>gcc</cite> (This translation process is really a
+pipeline and involves two other processes <cite>preprocessing</cite> and <cite>linking</cite>, which
+are carried out by separate programs, automatically invoked by
+<cite>gcc</cite>). Nevertheless, <cite>compilation</cite> is at the core of the translation
+process of C programs and is responsible for converting a high level
+language to its low level equivalent &#8211; version readily executable by
+the operating system on your computer. It is important to note that
+this executable file is composed of the instructions you wrote in your C
+program, along with a other details which are necessary to
+execute your program. These details are specific to the architecture
+and operating system you created the executable file on and hence if you copy a executable file
+you created on a Intel computer, it may not work at all or show strange
+behavior on a computer which has an ARM processor, for example. Hence, you
+will have to recompile the program on the new computer before you can
+execute it. Note that your C program still remains the same, but the low level
+machine language equivalent is different and <cite>gcc</cite> takes care of this.</p>
+<p>Now, let us consider our first Python program:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Print Hello world</span>
+<span class="k">if</span> <span class="n">__name__</span><span class="o">==</span><span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="k">print</span> <span class="s">&#39;Hello World!&#39;</span>
+</pre></div>
+</div>
+<p>You executed this program as follows</p>
+<div class="highlight-python"><pre>$ python helloworld.py
+Hello World!</pre>
+</div>
+<p>Unlike C, where you compiled the program first to get a separate
+executable file and then executed it (a two step process), here you
+executed the program in a single step - your program is directly executed on-the-fly. This
+is how traditionally <cite>interpreters</cite> (interpreted languages) worked. However, modern day
+interpreted languages like Python and others also involve a compilation
+step. Your program <cite>helloworld.py</cite> is first converted to an intermediate
+representation which is a low level equivalent of your high level
+language program. The difference from C is that the instructions in
+these low level language equivalents are not meant to be executed by a
+<em>real</em> computer, but a <em>process virtual machine</em> <a class="footnote-reference" href="#id5" id="id1">[1]</a>. In the case of Python, the intermediate
+representation is known as <cite>bytecodes</cite> and the virtual machine referred
+to as the <cite>bytecode interpreter</cite> or the Python virtual machine.
+Hence, the Python code is first converted into its bytecode equivalent
+which is then executed by the bytecode interpreter. When you run a
+Python program using <cite>python helloworld.py</cite>, both these steps happen in
+the background.</p>
+<p>While discussing the section on C compilation I mentioned that the
+executable you create on an Intel computer will not run on an ARM
+computer, because of the architecture specific instructions embedded
+into the executable required for executing the program. In the case of
+Python the bytecodes (result of compilation of the Python program) are
+executed by the Python virtual machine, instead of the real
+computer. This extra layer of abstraction allows
+you to execute the same bytecodes (without recompiling) on an Intel computer and an
+ARM computer, for example.</p>
+<p>Let us understand this better with a real example. I will use two
+computers for the experiments: System1 and System2, with both running
+Fedora Linux. However, System1&#8217;s instruction set architecture is x86_64 (Intel) where as
+System2 is a <a class="reference external" href="http://www.raspberrypi.org">RaspberryPi</a> with an armv6l (ARM) instruction set.</p>
+<div class="section" id="c">
+<h3>C<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h3>
+<p>First, I will the consider the <tt class="docutils literal"><span class="pre">helloworld.c</span></tt> program. I will compile this
+program on System1:</p>
+<div class="highlight-python"><pre>$ arch
+x86_64
+$ gcc -o helloworld helloworld.c
+$ file ./helloworld
+./helloworld: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+BuildID[sha1]=0xc50d74290927cb25ef9e34055af6c437e89ed5eb, not stripped</pre>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">file</span></tt> command shows the type of a file <a class="footnote-reference" href="#id6" id="id2">[2]</a> and from the above
+output, the key information for us is that the file <tt class="docutils literal"><span class="pre">helloworld</span></tt> is
+a <cite>ELF 64-bit LSB executable, x86-64, version 1 (SYSV)</cite>. You can
+of course execute the program as we have done earlier using
+<tt class="docutils literal"><span class="pre">./helloworld</span></tt>.</p>
+<p>Now, copy the file, <tt class="docutils literal"><span class="pre">helloworld</span></tt> to System2, and try to execute the
+object file:</p>
+<div class="highlight-python"><pre>$ arch
+armv6l
+$ file helloworld
+helloworld: ELF 64-bit LSB executable, x86-64, version 1 (SYSV),
+dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+BuildID[sha1]=0xc50d74290927cb25ef9e34055af6c437e89ed5eb, not stripped
+$ ./helloworld
+-bash: ./helloworld: cannot execute binary file</pre>
+</div>
+<p>It is clear from the above error message, that <tt class="docutils literal"><span class="pre">helloworld</span></tt> could
+not be executed on System2. Now, transfer the <tt class="docutils literal"><span class="pre">helloworld.c</span></tt> file to
+System2 and compile and execute the file as on System1:</p>
+<div class="highlight-python"><pre>$ gcc -o helloworld helloworld.c
+$ file helloworld
+helloworld: ELF 32-bit LSB executable, ARM, version 1 (SYSV),
+dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+BuildID[sha1]=0xba57691af19ff94f894645398e66e263c8f57a9b, not stripped
+$ ./helloworld
+Hello World!</pre>
+</div>
+<p>As you can see, the file format of <tt class="docutils literal"><span class="pre">helloworld</span></tt> is different on
+System2 as expected and hence it had to be recreated to execute it.</p>
+</div>
+<div class="section" id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
+<p>On System1, create the <cite>compiled</cite> version of <tt class="docutils literal"><span class="pre">helloworld.py</span></tt> using the following
+code <a class="footnote-reference" href="#id7" id="id3">[3]</a>:</p>
+<div class="highlight-python"><pre>$ python -c "import py_compile;py_compile.compile('helloworld.py')"</pre>
+</div>
+<p>Or, the cleaner version: <tt class="docutils literal"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">-m</span> <span class="pre">py_compile</span> <span class="pre">helloworld.py</span></tt>.
+This will create a <tt class="docutils literal"><span class="pre">helloworld.pyc</span></tt> file in your directory. Once
+again, we can use the <tt class="docutils literal"><span class="pre">file</span></tt> command to see the file type of <tt class="docutils literal"><span class="pre">helloworld.pyc</span></tt>:</p>
+<div class="highlight-python"><pre>$ file helloworld.pyc
+helloworld.pyc: python 2.7 byte-compiled</pre>
+</div>
+<p>To execute the compiled file, simply invoke the <tt class="docutils literal"><span class="pre">python</span></tt> interpreter
+with the <tt class="docutils literal"><span class="pre">helloworld.pyc</span></tt> file as an argument, rather than the
+source file: <tt class="docutils literal"><span class="pre">python</span> <span class="pre">helloworld.pyc</span></tt>.</p>
+<p>Now, copy the file <tt class="docutils literal"><span class="pre">helloworld.pyc</span></tt> to System2 and try to execute
+it:</p>
+<div class="highlight-python"><pre>$ arch
+armv6l
+$ file helloworld.pyc
+helloworld.pyc: python 2.7 byte-compiled
+$ python helloworld.pyc
+Hello World!</pre>
+</div>
+<p>To summarize, the compiled <tt class="docutils literal"><span class="pre">helloworld.pyc</span></tt> could be executed
+without being re-created from its source file, <tt class="docutils literal"><span class="pre">helloworld.py</span></tt> on
+two systems with different instruction set architecture. This was made
+possible by the <tt class="docutils literal"><span class="pre">python</span></tt> bytecode interpreter on the two systems,
+which created an abstraction between the bytecodes and the native
+instruction set architecture <a class="footnote-reference" href="#id8" id="id4">[4]</a>. I should mention here that if your
+Python application has anything to beyond pure Python code (C
+extension, for example), the results of the experiments here will not
+be applicable.</p>
+<p><tt class="docutils literal"><span class="pre">python</span></tt></p>
+<p>The Python executable, <tt class="docutils literal"><span class="pre">python</span></tt> is nothing but a ELF file (similar to your <tt class="docutils literal"><span class="pre">helloworld</span></tt>
+but obviously created from a more complicated set of C source
+files). The almost magical behavior of Python bytecodes that we saw
+in the previous section is made possible by <tt class="docutils literal"><span class="pre">python</span></tt> taking care of
+the steps necessary to execute the bytecodes on systems with
+different instruction set architecture. To understand this better,
+consider the following two commands, the first on System1 and the
+second on System2:</p>
+<div class="highlight-python"><pre>$ file /usr/bin/python2.7
+/usr/bin/python2.7: ELF 64-bit LSB executable, x86-64, version 1
+(SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+BuildID[sha1]=0x9d8a414b778ff11ec075995248c43cdf5b67f17a, stripped
+
+$ file /usr/bin/python2.7
+/usr/bin/python2.7: ELF 32-bit LSB executable, ARM, version 1 (SYSV),
+dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+BuildID[sha1]=0x63fd81d3591769d6be0619b7273935ab9521010c, stripped</pre>
+</div>
+<p>As is clear from the above output, the file <tt class="docutils literal"><span class="pre">/usr/bin/python2.7</span></tt>
+(<tt class="docutils literal"><span class="pre">/usr/bin/python</span></tt> is symlinked to <tt class="docutils literal"><span class="pre">/usr/bin/python2</span></tt>, which is in
+turn symlinked to <tt class="docutils literal"><span class="pre">/usr/bin/python2.7</span></tt> in reality), is an ELF
+executable and it has obviously been compiled separately on both these
+systems, thus showing the different ELF file formats.</p>
+</div>
+<div class="section" id="conclusion">
+<h3>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h3>
+<p>The above experiments have hopefully shed some light on C being a
+compiled language and Python being a compiled and interpreted
+language, which leads to its interoperability between different
+architectures.</p>
+<p>However, it is important that I mention a language is not compiled or
+interpreted. That is, it is not technically 100% accurate to say that C is a
+compiled language. A language implementation, rather than the language
+is compiled or interpreted. There are interpreters for the C language
+which interpret your C programs and there are Python implementations
+which are compiled (The water gets murkier in the case of Python,
+and the boundary between being compiled and interpreted not always
+clear).</p>
+</div>
+<div class="section" id="footnotes">
+<h3>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h3>
+<table class="docutils footnote" frame="void" id="id5" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Note that, there are two kinds of virtual machines that can be
+implemented in software: <cite>system virtual machine</cite> and <cite>process
+virtual machine</cite>. Here, I am referring to the process virtual
+machine. See the <a class="reference external" href="http://en.wikipedia.org/wiki/Virtual_machine">Wikipedia article</a> on Virtual Machine
+to learn more.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td><a class="reference external" href="http://linux.die.net/man/1/file">http://linux.die.net/man/1/file</a></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>The <tt class="docutils literal"><span class="pre">py_compile</span></tt> module can be used to compile a Python
+program into its bytecode equivalent. This is the version of your
+program that is executed the Python bytecode interpreter. See:
+<a class="reference external" href="http://docs.python.org/2/library/py_compile.html">http://docs.python.org/2/library/py_compile.html</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>Actually, to be more accurate, the <tt class="docutils literal"><span class="pre">python</span></tt> executable takes
+care of the interfacing with the operating system kernel (Linux
+Kernel), which is once again different on systems with different
+instruction set architecture.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="see-also">
+<h3>See also<a class="headerlink" href="#see-also" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><a class="reference external" href="http://readlists.com/f2bd0b33">List of readings on Compilers and Interpreters</a></li>
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/Instruction_set_architecture">Instruction Set Architecture</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="alternative-ways-of-invoking-the-python-executable">
+<h2>Alternative ways of invoking the Python executable<a class="headerlink" href="#alternative-ways-of-invoking-the-python-executable" title="Permalink to this headline">¶</a></h2>
+<p>In the book, I have discussed two ways of executing Python code:</p>
+<ul>
+<li><dl class="first docutils">
+<dt><strong>Interactive mode</strong>: In this mode (when you simply execute <tt class="docutils literal"><span class="pre">python</span></tt> on your Windows or Linux command line) the Python</dt>
+<dd><p class="first last">binary/executable starts a Read-Eval-Print-Loop (<a class="reference external" href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>),
+executing your commands and executes them as you enter them.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt><strong>Script mode</strong>: In script mode, you specify a script name to the Python binary. This script is then compiled into bytecodes and</dt>
+<dd><p class="first last">executed by the intepreter to finally show you the output.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="section" id="c-switch">
+<h3>-c switch<a class="headerlink" href="#c-switch" title="Permalink to this headline">¶</a></h3>
+<p>We know that the interactive mode is useful for quickly trying out
+experimental code. However, using the <tt class="docutils literal"><span class="pre">-c</span></tt> switch, it is possible to execute Python code,
+without even starting an interactive interpreter session. For example,
+<tt class="docutils literal"><span class="pre">python</span> <span class="pre">-c</span> <span class="pre">&quot;1+2&quot;</span></tt> would print <tt class="docutils literal"><span class="pre">3</span></tt>:</p>
+<div class="highlight-python"><pre>$ python -c "print 1+2"
+3</pre>
+</div>
+<p>You can have separate Python statements, seperated by a <tt class="docutils literal"><span class="pre">;</span></tt>:</p>
+<div class="highlight-python"><pre>$ python -c "print 1+2;print 2*3"
+3
+6</pre>
+</div>
+</div>
+<div class="section" id="i-switch">
+<h3>-i switch<a class="headerlink" href="#i-switch" title="Permalink to this headline">¶</a></h3>
+<p>Let us assume that you are working on a Python script, about which you are
+not sure if it is completely accurate and if the execution halts due
+to an error, you would like to perform some post-mortem analysis on
+your program at the state in which it halted. The <tt class="docutils literal"><span class="pre">-i</span></tt> (interactive)
+switch becomes useful in such a situation.</p>
+<p>Consider the following test program (<tt class="docutils literal"><span class="pre">test1.py</span></tt>):</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mf">10.0</span>
+
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span> <span class="n">a</span><span class="o">/</span><span class="n">b</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p>Its easy to see that when <tt class="docutils literal"><span class="pre">b=0</span></tt>, the execution of the program will
+halt with an exception:</p>
+<div class="highlight-python"><pre>Traceback (most recent call last):
+File "test1.py", line 5, in &lt;module&gt;
+    print a/b
+    ZeroDivisionError: float division by zero</pre>
+</div>
+<p>For this simple program, it is trivial to find the problematic line of
+code and fix it. However, if this division operation was a part of a
+more complicated program or if the error belonged to the category of
+<cite>semantic</cite> errors, the <tt class="docutils literal"><span class="pre">-i</span></tt> switch would prove useful.</p>
+<p>For example, when the above script is invoked with the <tt class="docutils literal"><span class="pre">-i</span></tt> switch
+passed to the Python executable, upon completion of the program
+execution, a <tt class="docutils literal"><span class="pre">&gt;&gt;&gt;</span></tt> prompt is presented to you. You can access any
+Python object available in the <em>scope</em> at the point execution of the
+program was halted:</p>
+<div class="highlight-python"><pre>$ python -i test1.py
+Traceback (most recent call last):
+File "test1.py", line 5, in &lt;module&gt;
+print a/b
+ZeroDivisionError: float division by zero
+&gt;&gt;&gt; print a
+1.0
+&gt;&gt;&gt; print b
+0.0
+&gt;&gt;&gt; dir()
+['__builtins__', '__doc__', '__name__', '__package__', 'a', 'b']
+&gt;&gt;&gt;</pre>
+</div>
+</div>
+</div>
+<div class="section" id="indentation-in-python">
+<h2>Indentation in Python<a class="headerlink" href="#indentation-in-python" title="Permalink to this headline">¶</a></h2>
+<p>As you know, Python uses spaces for indentation. A new block of code
+should always begin at a &#8220;deeper&#8221; indentation level than its enclosing
+one. This article <a class="reference external" href="http://www.secnetix.de/~olli/Python/block_indentation.hawk">here</a> discusses Python&#8217;s indentation and myths
+surrounding it.</p>
+</div>
+<div class="section" id="python-3">
+<h2>Python 3<a class="headerlink" href="#python-3" title="Permalink to this headline">¶</a></h2>
+<p>The Python language specification currently exists in two forms -
+Python 2 and Python 3. The programs that we discussed in the book are
+written using Python 2. Although, most of what you will read in the
+book will still be applicable, there are a number of incompatible
+differences between Python 2 and Python 3. We shall discuss this in
+detail in a future article.</p>
+<p>If you are curious, you can take a look at this <a class="reference external" href="http://docs.python.org/3/whatsnew/3.0.html">link</a>.</p>
+</div>
+<div class="section" id="python-implementations">
+<h2>Python Implementations<a class="headerlink" href="#python-implementations" title="Permalink to this headline">¶</a></h2>
+<p>In common parlance, Python is used to refer to Python - the
+programming language <em>and</em> Python - the compiler freely available from
+the official <a class="reference external" href="http://www.python.org">project website</a>. These are obviously two different
+things.</p>
+<p><strong>CPython</strong></p>
+<p>Python, the <em>programming language</em> is exactly what it says - a
+programming language, noting more. It has a <a class="reference external" href="http://docs.python.org/3/reference/grammar.html">grammar specification</a>, a <cite>data
+model</cite>, an <cite>execution model</cite>, <a class="reference external" href="http://docs.python.org/3/reference/index.html">etc</a>. It is a blueprint for the
+language. However, Python being a high level language requires a
+translator to take care of transforming the program in high level
+language to form executable by the underlying computer system. Thus,
+nothing stops anyone with the necessary knowledge and armed
+with the right tools to write his or her own program which will
+recognize a program written in Python, process it and carry out the
+instructions laid out in the program. This program
+would be called an <em>implementation</em> of the Python language. This is
+exactly what Python - the compiler available from the project website
+is. This implementation is the default (reference) implementation of the Python
+programming language and is written in C. Hence, it is also referred
+to as <cite>CPython</cite>. With other production quality Python
+implementation existing, it is a good idea to make it a habit to refer
+to it as <cite>CPython</cite>, rather than Python to distinguish it from Python,
+the programming language.</p>
+<p>CPython currently supports both Python 2 and Python 3 language
+specifications and is available for Mac OS/X, Linux, Windows and other
+Unix-es.</p>
+<p>Now that we know what CPython is, let&#8217;s look at the other production
+quality Python implementations.</p>
+<p><strong>Jython</strong></p>
+<p><a class="reference external" href="http://jython.org/">Jython</a> is a Python implementation written in Java. The CPython
+implementation&#8217;s compiler compiles a Python program into bytecodes
+executable by the CPython virtual machine. <cite>Jython</cite> on the other hand
+generates bytecodes for the Java virtual machine from the Python
+language program (just as a Java program when compiled is translated
+into bytecodes for the JVM).</p>
+<p>An interesting aspect of Jython is tha you can use Java&#8217;s standard
+libraries in your Python programs. For example, you could use Java Swing
+to write a GUI application in Jython.</p>
+<p>Jython currently implements the Python 2 language specification with
+the latest release (as of 04-March, 2013) being Jython 2.7 beta 1(to match with Python 2.7). Since
+it is written in Java, it is available on all platforms capable of
+running Java and needs the Java run-time to be available for its functioning.</p>
+<p><strong>IronPython</strong></p>
+<p><a class="reference external" href="http://ironpython.net/">IronPython</a> is an implementation of Python which runs on the <a class="reference external" href="http://en.wikipedia.org/wiki/.NET_Framework">.NET</a>
+framework. Specifically, IronPython is built on top of the DLR
+(<a class="reference external" href="http://en.wikipedia.org/wiki/Dynamic_Language_Runtime">Dynamic Language Runtime</a>), which is again built upon the CLR
+(<a class="reference external" href="http://en.wikipedia.org/wiki/Common_Language_Runtime">Common Language Runtime</a>). What all this effectively means is that
+Python code when built upon IronPython have access to the .NET
+libraries in addition to its own features and libraries.</p>
+<p>As of 04-March-2013, the last release of IronPython was
+2.7.3. IronPython is available for Windows and on Linux (via
+<a class="reference external" href="http://www.mono-project.com/Python">Mono</a>).</p>
+<p><strong>PyPy</strong></p>
+<p><a class="reference external" href="http://pypy.org/">PyPy</a> is an implementation of Python, written in a restricted proper
+subject of Python, <cite>RPython</cite>. I will not go into any further details
+about the implementation here, since that is out of scope for this
+article.</p>
+<p>As of this writing PyPy is compatible with Python 2.7.2 and supports
+most of the standard library modules. PyPy is available for Linux, Mac
+OS/X and Windows.</p>
+<p><strong>Others</strong></p>
+<p>There are many more at varying stages of development listed on the
+Python wiki <a class="reference external" href="http://wiki.python.org/moin/PythonImplementations">page</a>.</p>
+</div>
+</div>
+
+
+                    
+                </div>
+                <div class="span3">
+                    
+        <div class="sphinxsidebar">
+            <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Chapter 1: Getting Started</a><ul>
+<li><a class="reference internal" href="#setting-up-microsoft-windows-7">Setting up Microsoft Windows 7</a><ul>
+<li><a class="reference internal" href="#setting-up-cygwin-and-gcc-for-c-programming">Setting up Cygwin and gcc for C programming</a></li>
+<li><a class="reference internal" href="#setting-up-python">Setting up Python</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setting-up-linux">Setting up Linux</a></li>
+<li><a class="reference internal" href="#compilers-and-interpreters">Compilers and Interpreters</a><ul>
+<li><a class="reference internal" href="#c">C</a></li>
+<li><a class="reference internal" href="#python">Python</a></li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li><a class="reference internal" href="#footnotes">Footnotes</a></li>
+<li><a class="reference internal" href="#see-also">See also</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#alternative-ways-of-invoking-the-python-executable">Alternative ways of invoking the Python executable</a><ul>
+<li><a class="reference internal" href="#c-switch">-c switch</a></li>
+<li><a class="reference internal" href="#i-switch">-i switch</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indentation-in-python">Indentation in Python</a></li>
+<li><a class="reference internal" href="#python-3">Python 3</a></li>
+<li><a class="reference internal" href="#python-implementations">Python Implementations</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Book Website</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="chap2.html"
+                        title="next chapter">Chapter 2: Variables, Memory Allocation and Pointers</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/chap1.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+            </div>
+        </div>
+                </div>
+            
+        </div>
+    </div>
+    <div class="footer">
+        
+        <div class="container">
+                    &copy;
+                        Copyright 2013, Amit Saha.
+                Last updated
+                    on Apr 21, 2013.
+                Created using <a
+                        href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3
+                    .
+                Theme <a href="https://github.com/scotch/sphinx-bootstrap">Sphinx-Bootstrap</a>
+                adapted from
+                <a href="http://twitter.github.com/bootstrap/">Twitter's
+                    Bootstrap</a> by <a href="http://www.scotchmedia.com">Scotch
+                Media</a>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript">
+    $('.nav .active').on('click', function () {
+        e.preventDefault()
+        $(this).siblings().toggle()
+    });
+</script>
+
+<!-- plusone -->
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+
+<!-- twitter -->
+<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+</body>
+</html>

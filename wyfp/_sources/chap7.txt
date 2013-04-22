@@ -1,0 +1,50 @@
+Chapter 7:Advanced Topics
+-------------------------
+
+.. Old Style and New Style Classes
+.. -------------------------------
+
+.. Multiple Inheritance
+.. --------------------
+
+.. Polymorphism in Python
+.. ----------------------
+
+.. Object Oriented Programming Resources
+.. -------------------------------------
+
+.. Makefiles
+.. ---------
+
+.. Macros in C
+.. -----------
+
+.. Namespaces in Python
+.. --------------------
+
+.. Error handling in C
+.. -------------------
+
+.. Error handling in Python
+.. ------------------------
+
+Setting up Git
+==============
+
+In the book, I showed you can use `git <http://git-scm.com/>`_ to
+start managing your projects. Installing it on Fedora Linux is as easy
+as executing a single command, ``yum -y install git``. On Windows,
+using `GitHub for Windows <http://windows.github.com/>`_ is an easy way to start using ``git`` and
+also hosting your projects on `GitHub <http://github.com>`_. The following two screencasts
+demonstrate how you can setup GitHub for Windows.
+
+GitHub for Windows on Windows 7 - Part I
+
+.. youtube:: 6ynUCjlhdXY
+   :width: 80%
+
+
+GitHub for Windows on Windows 7 - Part II
+
+.. youtube:: b7oQBxLbqTc
+   :width: 80%

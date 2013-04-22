@@ -1,0 +1,217 @@
+Chapter 3: Basic Programming Constructs
+---------------------------------------
+
+.. Tokenizing input in C
+.. ---------------------
+
+``input()`` and ``raw_input()`` in Python
+=========================================
+
+Consider the following Python interactive console session with the
+input() function::
+
+    >>> input()
+    1
+    1
+    >>> input()
+    'f00 bar'
+    'f00 bar'
+    >>> input()
+    'f00
+    Traceback (most recent call last):
+      File "", line 1, in 
+      File "", line 1
+       'f00
+          ^
+    SyntaxError: EOL while scanning string literal
+    >>> input()
+    1 67
+    Traceback (most recent call last):
+    File "", line 1, in 
+    File "", line 1
+    1 67
+       ^
+    SyntaxError: unexpected EOF while parsing
+
+   >>> input()
+   '1 67'
+   '1 67'
+
+And now, the raw_input() function::
+
+    >>> raw_input()
+    1
+    '1'
+    >>> raw_input()
+    2 56
+    '2 56'
+    >>> raw_input()
+    'f00 bar
+    "'f00 bar"
+    >>> raw_input()
+    f00bar
+    'f00bar'
+
+    >>> 
+
+And finally::
+
+    >>> input()
+    5+4
+    9
+    >>> raw_input()
+    5+4
+    '5+4'
+
+As mentioned in the documentation for the input() function,
+the eval() function is called on the input using input(). Hence, the
+input should be syntactically valid Python. With raw_input(), the
+input is returned as a string and hence can be anything that your
+program wants to handle. In Python 3, raw_input() has been renamed to
+input() and raw_input doesn’t exist.
+
+
+Simulating C like scanf()
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can simulate C like scanf() behavior using ``raw_input()`` and
+``split()``. For example::
+
+    >>> x,y,z=raw_input('Enter the co-ordinates:: ').split()
+    Enter the co-ordinates:: 1 5 6
+    >>> x
+    '1'
+    >>> y
+    '5'
+    >>> z
+    '6'
+    >>> int(x)
+    1
+    >>> int(y)
+    5
+    >>> int(z)
+    6
+
+Since the input is considered a string, we have to do explicit type
+conversion if we want to treat the input as integers, for example.
+
+.. admonition:: ``raw_input()`` is ``input()`` in Python 3
+   
+  In Python 3, ``raw_input()`` has been renamed to ``input()`` and no
+  ``input()`` function exists.
+
+.. Converting between data types
+.. =============================
+
+.. * C
+.. * Python
+
+.. Tokenizing input in Python
+.. --------------------------
+
+.. if..then..else in C
+.. -------------------
+
+.. * Demo of multiple conditions
+.. * Compound conditions
+
+.. if..then..else in Python
+.. ------------------------
+
+.. * Demo of multiple conditions
+.. * simulating switch case in Python
+.. * Compound conditions
+
+
+.. Experimenting with for loops in C
+.. ---------------------------------
+
+.. * Different parts..
+
+``range()`` and ``xrange()`` in Python
+======================================
+
+We used the ``range()`` function (usually with a ``for`` loop) to genarate a
+sequence of integers. Let us see a few more examples::
+
+    >>> range(1,10,1)
+    [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    >>> range(1,10,2)
+    [1, 3, 5, 7, 9]
+    >>> range(1,10,4)
+    [1, 5, 9]
+
+As you can see, the ``range()`` function returns a ``list`` of
+integers (indicated by the square brackets). You could ofcourse verify
+it with the inbuilt ``type()`` function::
+
+    >>> type(range(1,10,4))
+    <type 'list'>
+
+Besides the ``range()`` function, there is also a ``xrange()``
+function which also behaves similarly to the ``range()`` function::
+
+    >>> for item in xrange(1, 13, 4):
+    ...     print item
+    ... 
+    1
+    5
+    9
+
+The difference, however is in the type of the object returned by the
+`xrange()` function::
+
+    >>> type(xrange(1, 13, 4))
+    <type 'xrange'>
+
+`xrange()` returns a *generator* object, which in this context
+basically means that no integer object is generated (and stored in memory)
+until it has been requested for. In the above example, only when we
+used the ``for`` loop to print each item, an integer object is created in an
+on-demand fashion.
+
+.. admonition:: No ``xrange()`` in Python 3
+
+   In Python 3, ``xrange()`` has been removed and ``range()`` returns
+   a generator object instead of a list.
+
+See also:
+
+- `Python generators <http://wiki.python.org/moin/Generators>`_
+- `Strange behavior of xrange() in Python 2 <http://stackoverflow.com/questions/15409752/strange-xrange-behavior-in-python-2>`_
+
+.. Experimenting with for loops in Python
+.. --------------------------------------
+
+.. Functions and Return Values
+.. ===========================
+
+.. * Returning Multiple Values
+
+.. Recursion
+.. ---------
+
+.. Command Line Arguments
+.. ----------------------
+
+
+
+Function parameters
+===================
+
+In the book, you saw how you can call a function with one or more
+parameters. What happens when you change the data referred to by these
+parameters? To understand this, you have to account for the data type
+of these parameters. :ref:`data_c_python` refers to three articles
+discussing data in C and CPython. Specifically, the following sections
+from the firs two articles discuss the semantics of function
+parameters:
+
+- `Function parameters in CPython <http://amitsaha.github.io/site/notes/articles/data_python_c/data_python.html#function-parameters>`_
+- `Function parameters in C <http://amitsaha.github.io/site/notes/articles/data_python_c/data_c.html#function-parameters>`_
+
+.. Storage Classes in C
+.. --------------------
+
+
+

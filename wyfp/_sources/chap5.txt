@@ -1,0 +1,15 @@
+File Handling and Persistent Storage
+====================================
+
+The EOF character
+-----------------
+
+fseek() and seek()
+------------------
+
+Database Management Systems
+---------------------------
+
+Interfacing in C
+Interfacing in Python
+

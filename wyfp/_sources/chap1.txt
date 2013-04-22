@@ -1,0 +1,548 @@
+Chapter 1: Getting Started
+--------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+
+Setting up Microsoft Windows 7
+==============================
+
+Setting up Cygwin and gcc for C programming
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this screencast, I show you how you can setup ``gcc`` on Microsoft
+Windows 7 using Cygwin:
+
+.. youtube:: F-FcvspXc1A
+   :width: 80%
+
+Next, I show how you can use Notepad++ to edit your C code and compile
+it using ``gcc``:
+
+.. youtube:: DwBDMNshnhc
+   :width: 80%
+
+
+Setting up Python
+~~~~~~~~~~~~~~~~~
+
+In the first screencast, we download the Python 2.7 installer, and install it:
+
+.. youtube:: wnAsMQbCVXA
+   :width: 80%
+
+
+In the next screencast, we setup the Windows ``Path`` variable so that
+we can invoke the ``python`` executable from anywhere on the Windows
+command line:
+
+.. youtube:: dU_ca27EGT8
+   :width: 80%
+
+In this screencast, I show you how you can use Notepad++ to edit
+Python code and run it using the ``python`` executable:
+
+.. youtube:: 8Q1faUbG470
+   :width: 80%
+
+
+Setting up Linux
+================
+
+If you have got only Microsft Windows 7 installed on your computer, an easy way
+to try Linux is to install it in a virtual machine. In the first
+screencast, I show you how you can install Oracle VirtualBox on
+Windows 7:
+
+.. youtube:: Xkw32QcjoSg
+   :width: 80%
+
+
+In the next two screencasts, I show you how to install `Fedora 18 Linux <http://fedoraproject.org>`_
+on Windows using Oracle VirtualBox:
+
+Part - I:
+
+.. youtube:: 77LUaV7w12U
+   :width: 80%
+
+
+Part - II:
+
+.. youtube:: tmTlpZbsMxs
+   :width: 80%
+
+
+As you can see from the last screencast, Python 2.7 is already
+installed on Linux. To install `gcc`, you can use the command: ``yum -y install gcc`` either using ``sudo`` or as the root user.
+
+Fedora 18 comes with a program called ``gedit`` installed, which you
+can use to edit your programs. Here is a screencast to get you
+started:
+
+.. youtube:: e2VlTgQr1PA
+   :width: 80%
+
+Compilers and Interpreters
+==========================
+
+In the first chapter of the book, you learnt that programs written in
+high level languages have to be translated into a low level language
+using compilers. This low level language is either in a `native` form,
+in the sense that it is understood by the operating system itself, or
+in an `intermediate` form which is understood by an intermediary such
+as the `bytecode interpreter`. You also learnt that C is a compiled
+language, whereas Python is both compiled `and` interpreted. Here, I will
+try to explain these statements in more detail by carrying out
+experiments on Linux.
+
+The first program we wrote, `helloworld.c` looked like this:
+
+.. code-block:: c
+
+   # include<stdio.h>
+
+   int main(int argc, char **argv)
+   {
+      printf("Hello World!\n");
+      return 0;
+   }
+ 
+We compiled and executed this program as follows (on Linux):
+
+.. code-block:: c
+
+    $ gcc -o helloworld helloworld.c
+    $ ./helloworld
+    Hello World
+
+The executable file `helloworld` is the low level language
+equivalent of the high level language program, `helloworld.c`. This is
+what the operating system on your computer understands and hence when it
+is executed or run, it prints `Hello World` on the screen. This process
+of converting `helloworld.c` to `helloworld` represents the
+*translation* process. In the case of C, this translation process is
+performed by the compiler, `gcc` (This translation process is really a
+pipeline and involves two other processes `preprocessing` and `linking`, which
+are carried out by separate programs, automatically invoked by
+`gcc`). Nevertheless, `compilation` is at the core of the translation
+process of C programs and is responsible for converting a high level
+language to its low level equivalent -- version readily executable by
+the operating system on your computer. It is important to note that
+this executable file is composed of the instructions you wrote in your C
+program, along with a other details which are necessary to
+execute your program. These details are specific to the architecture
+and operating system you created the executable file on and hence if you copy a executable file
+you created on a Intel computer, it may not work at all or show strange
+behavior on a computer which has an ARM processor, for example. Hence, you
+will have to recompile the program on the new computer before you can
+execute it. Note that your C program still remains the same, but the low level
+machine language equivalent is different and `gcc` takes care of this.
+
+Now, let us consider our first Python program::
+
+    # Print Hello world
+    if __name__=='__main__':
+        print 'Hello World!'
+
+You executed this program as follows ::
+
+    $ python helloworld.py
+    Hello World!
+
+Unlike C, where you compiled the program first to get a separate
+executable file and then executed it (a two step process), here you
+executed the program in a single step - your program is directly executed on-the-fly. This
+is how traditionally `interpreters` (interpreted languages) worked. However, modern day
+interpreted languages like Python and others also involve a compilation
+step. Your program `helloworld.py` is first converted to an intermediate
+representation which is a low level equivalent of your high level
+language program. The difference from C is that the instructions in
+these low level language equivalents are not meant to be executed by a
+*real* computer, but a *process virtual machine* [#]_. In the case of Python, the intermediate
+representation is known as `bytecodes` and the virtual machine referred
+to as the `bytecode interpreter` or the Python virtual machine.
+Hence, the Python code is first converted into its bytecode equivalent
+which is then executed by the bytecode interpreter. When you run a
+Python program using `python helloworld.py`, both these steps happen in
+the background.
+
+While discussing the section on C compilation I mentioned that the
+executable you create on an Intel computer will not run on an ARM
+computer, because of the architecture specific instructions embedded
+into the executable required for executing the program. In the case of
+Python the bytecodes (result of compilation of the Python program) are
+executed by the Python virtual machine, instead of the real
+computer. This extra layer of abstraction allows
+you to execute the same bytecodes (without recompiling) on an Intel computer and an
+ARM computer, for example.
+
+Let us understand this better with a real example. I will use two
+computers for the experiments: System1 and System2, with both running
+Fedora Linux. However, System1's instruction set architecture is x86_64 (Intel) where as
+System2 is a `RaspberryPi <http://www.raspberrypi.org>`_ with an armv6l (ARM) instruction set. 
+
+C
+~
+
+First, I will the consider the ``helloworld.c`` program. I will compile this
+program on System1::
+
+    $ arch
+    x86_64
+    $ gcc -o helloworld helloworld.c
+    $ file ./helloworld
+    ./helloworld: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+    BuildID[sha1]=0xc50d74290927cb25ef9e34055af6c437e89ed5eb, not stripped
+
+    
+The ``file`` command shows the type of a file [#]_ and from the above
+output, the key information for us is that the file ``helloworld`` is
+a `ELF 64-bit LSB executable, x86-64, version 1 (SYSV)`. You can
+of course execute the program as we have done earlier using
+``./helloworld``.
+
+Now, copy the file, ``helloworld`` to System2, and try to execute the
+object file::
+
+    $ arch
+    armv6l
+    $ file helloworld
+    helloworld: ELF 64-bit LSB executable, x86-64, version 1 (SYSV),
+    dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+    BuildID[sha1]=0xc50d74290927cb25ef9e34055af6c437e89ed5eb, not stripped
+    $ ./helloworld 
+    -bash: ./helloworld: cannot execute binary file
+
+It is clear from the above error message, that ``helloworld`` could
+not be executed on System2. Now, transfer the ``helloworld.c`` file to
+System2 and compile and execute the file as on System1::
+
+    $ gcc -o helloworld helloworld.c
+    $ file helloworld
+    helloworld: ELF 32-bit LSB executable, ARM, version 1 (SYSV),
+    dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+    BuildID[sha1]=0xba57691af19ff94f894645398e66e263c8f57a9b, not stripped
+    $ ./helloworld 
+    Hello World!
+
+As you can see, the file format of ``helloworld`` is different on
+System2 as expected and hence it had to be recreated to execute it.
+
+
+Python
+~~~~~~
+
+On System1, create the `compiled` version of ``helloworld.py`` using the following
+code [#]_::
+
+    $ python -c "import py_compile;py_compile.compile('helloworld.py')"
+
+Or, the cleaner version: ``$ python -m py_compile helloworld.py``.
+This will create a ``helloworld.pyc`` file in your directory. Once
+again, we can use the ``file`` command to see the file type of ``helloworld.pyc``::
+
+    $ file helloworld.pyc 
+    helloworld.pyc: python 2.7 byte-compiled
+
+To execute the compiled file, simply invoke the ``python`` interpreter
+with the ``helloworld.pyc`` file as an argument, rather than the
+source file: ``python helloworld.pyc``.
+
+Now, copy the file ``helloworld.pyc`` to System2 and try to execute
+it::
+
+    $ arch
+    armv6l
+    $ file helloworld.pyc 
+    helloworld.pyc: python 2.7 byte-compiled
+    $ python helloworld.pyc 
+    Hello World!
+
+To summarize, the compiled ``helloworld.pyc`` could be executed
+without being re-created from its source file, ``helloworld.py`` on
+two systems with different instruction set architecture. This was made
+possible by the ``python`` bytecode interpreter on the two systems,
+which created an abstraction between the bytecodes and the native
+instruction set architecture [#]_. I should mention here that if your
+Python application has anything to beyond pure Python code (C
+extension, for example), the results of the experiments here will not
+be applicable.
+
+
+``python``
+
+The Python executable, ``python`` is nothing but a ELF file (similar to your ``helloworld``
+but obviously created from a more complicated set of C source
+files). The almost magical behavior of Python bytecodes that we saw
+in the previous section is made possible by ``python`` taking care of
+the steps necessary to execute the bytecodes on systems with
+different instruction set architecture. To understand this better,
+consider the following two commands, the first on System1 and the
+second on System2::
+
+    $ file /usr/bin/python2.7
+    /usr/bin/python2.7: ELF 64-bit LSB executable, x86-64, version 1
+    (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+    BuildID[sha1]=0x9d8a414b778ff11ec075995248c43cdf5b67f17a, stripped
+
+    $ file /usr/bin/python2.7
+    /usr/bin/python2.7: ELF 32-bit LSB executable, ARM, version 1 (SYSV),
+    dynamically linked (uses shared libs), for GNU/Linux 2.6.32,
+    BuildID[sha1]=0x63fd81d3591769d6be0619b7273935ab9521010c, stripped
+
+As is clear from the above output, the file ``/usr/bin/python2.7``
+(``/usr/bin/python`` is symlinked to ``/usr/bin/python2``, which is in
+turn symlinked to ``/usr/bin/python2.7`` in reality), is an ELF
+executable and it has obviously been compiled separately on both these
+systems, thus showing the different ELF file formats.
+
+
+Conclusion
+~~~~~~~~~~
+
+The above experiments have hopefully shed some light on C being a
+compiled language and Python being a compiled and interpreted
+language, which leads to its interoperability between different
+architectures.
+
+However, it is important that I mention a language is not compiled or
+interpreted. That is, it is not technically 100% accurate to say that C is a
+compiled language. A language implementation, rather than the language
+is compiled or interpreted. There are interpreters for the C language
+which interpret your C programs and there are Python implementations
+which are compiled (The water gets murkier in the case of Python,
+and the boundary between being compiled and interpreted not always
+clear).
+
+Footnotes
+~~~~~~~~~
+
+.. [#] Note that, there are two kinds of virtual machines that can be
+   implemented in software: `system virtual machine` and `process
+   virtual machine`. Here, I am referring to the process virtual
+   machine. See the `Wikipedia article <http://en.wikipedia.org/wiki/Virtual_machine>`_ on Virtual Machine
+   to learn more.
+.. [#] http://linux.die.net/man/1/file
+.. [#] The ``py_compile`` module can be used to compile a Python
+   program into its bytecode equivalent. This is the version of your
+   program that is executed the Python bytecode interpreter. See:
+   `<http://docs.python.org/2/library/py_compile.html>`_.
+.. [#] Actually, to be more accurate, the ``python`` executable takes
+   care of the interfacing with the operating system kernel (Linux
+   Kernel), which is once again different on systems with different
+   instruction set architecture.
+
+
+See also
+~~~~~~~~
+
+- `List of readings on Compilers and Interpreters <http://readlists.com/f2bd0b33>`_
+- `Instruction Set Architecture <http://en.wikipedia.org/wiki/Instruction_set_architecture>`_
+
+
+Alternative ways of invoking the Python executable
+==================================================
+
+In the book, I have discussed two ways of executing Python code:
+
+- **Interactive mode**: In this mode (when you simply execute ``python`` on your Windows or Linux command line) the Python
+    binary/executable starts a Read-Eval-Print-Loop (`REPL`_),
+    executing your commands and executes them as you enter them.
+- **Script mode**: In script mode, you specify a script name to the Python binary. This script is then compiled into bytecodes and
+    executed by the intepreter to finally show you the output.
+
+
+-c switch
+~~~~~~~~~
+
+We know that the interactive mode is useful for quickly trying out
+experimental code. However, using the ``-c`` switch, it is possible to execute Python code,
+without even starting an interactive interpreter session. For example,
+``python -c "1+2"`` would print ``3``::
+
+    $ python -c "print 1+2"
+    3
+
+You can have separate Python statements, seperated by a ``;``::
+
+    $ python -c "print 1+2;print 2*3"
+    3
+    6
+
+-i switch
+~~~~~~~~~
+
+Let us assume that you are working on a Python script, about which you are
+not sure if it is completely accurate and if the execution halts due
+to an error, you would like to perform some post-mortem analysis on
+your program at the state in which it halted. The ``-i`` (interactive)
+switch becomes useful in such a situation.
+
+Consider the following test program (``test1.py``)::
+
+    a = 1.0
+    b = 10.0
+
+    while True:
+        print a/b
+	b = b-1
+
+Its easy to see that when ``b=0``, the execution of the program will
+halt with an exception::
+
+    Traceback (most recent call last):
+    File "test1.py", line 5, in <module>
+        print a/b
+	ZeroDivisionError: float division by zero
+
+
+For this simple program, it is trivial to find the problematic line of
+code and fix it. However, if this division operation was a part of a
+more complicated program or if the error belonged to the category of
+`semantic` errors, the ``-i`` switch would prove useful.
+
+For example, when the above script is invoked with the ``-i`` switch
+passed to the Python executable, upon completion of the program
+execution, a ``>>>`` prompt is presented to you. You can access any
+Python object available in the *scope* at the point execution of the
+program was halted::
+
+    $ python -i test1.py 
+    Traceback (most recent call last):
+    File "test1.py", line 5, in <module>
+    print a/b
+    ZeroDivisionError: float division by zero
+    >>> print a
+    1.0
+    >>> print b
+    0.0
+    >>> dir()
+    ['__builtins__', '__doc__', '__name__', '__package__', 'a', 'b']
+    >>> 
+
+
+
+Indentation in Python
+=====================
+
+As you know, Python uses spaces for indentation. A new block of code
+should always begin at a "deeper" indentation level than its enclosing
+one. This article `here
+<http://www.secnetix.de/~olli/Python/block_indentation.hawk>`_ discusses Python's indentation and myths
+surrounding it.
+
+
+Python 3
+========
+
+The Python language specification currently exists in two forms -
+Python 2 and Python 3. The programs that we discussed in the book are
+written using Python 2. Although, most of what you will read in the
+book will still be applicable, there are a number of incompatible
+differences between Python 2 and Python 3. We shall discuss this in
+detail in a future article.
+
+If you are curious, you can take a look at this link_.
+
+.. _link: http://docs.python.org/3/whatsnew/3.0.html
+
+
+Python Implementations
+======================
+ 
+In common parlance, Python is used to refer to Python - the
+programming language *and* Python - the compiler freely available from
+the official `project website`_. These are obviously two different
+things. 
+
+**CPython**
+
+Python, the *programming language* is exactly what it says - a
+programming language, noting more. It has a `grammar specification`_, a `data
+model`, an `execution model`, etc_. It is a blueprint for the
+language. However, Python being a high level language requires a
+translator to take care of transforming the program in high level
+language to form executable by the underlying computer system. Thus,
+nothing stops anyone with the necessary knowledge and armed
+with the right tools to write his or her own program which will
+recognize a program written in Python, process it and carry out the
+instructions laid out in the program. This program
+would be called an *implementation* of the Python language. This is
+exactly what Python - the compiler available from the project website
+is. This implementation is the default (reference) implementation of the Python
+programming language and is written in C. Hence, it is also referred
+to as `CPython`. With other production quality Python
+implementation existing, it is a good idea to make it a habit to refer
+to it as `CPython`, rather than Python to distinguish it from Python,
+the programming language.
+
+CPython currently supports both Python 2 and Python 3 language
+specifications and is available for Mac OS/X, Linux, Windows and other
+Unix-es.
+ 
+Now that we know what CPython is, let's look at the other production
+quality Python implementations.
+
+**Jython**
+
+`Jython`_ is a Python implementation written in Java. The CPython
+implementation's compiler compiles a Python program into bytecodes
+executable by the CPython virtual machine. `Jython` on the other hand
+generates bytecodes for the Java virtual machine from the Python
+language program (just as a Java program when compiled is translated
+into bytecodes for the JVM). 
+
+An interesting aspect of Jython is tha you can use Java's standard
+libraries in your Python programs. For example, you could use Java Swing
+to write a GUI application in Jython.
+
+Jython currently implements the Python 2 language specification with
+the latest release (as of 04-March, 2013) being Jython 2.7 beta 1(to match with Python 2.7). Since
+it is written in Java, it is available on all platforms capable of
+running Java and needs the Java run-time to be available for its functioning.
+
+
+**IronPython**
+
+`IronPython`_ is an implementation of Python which runs on the `.NET`_
+framework. Specifically, IronPython is built on top of the DLR
+(`Dynamic Language Runtime`_), which is again built upon the CLR
+(`Common Language Runtime`_). What all this effectively means is that
+Python code when built upon IronPython have access to the .NET
+libraries in addition to its own features and libraries.
+
+As of 04-March-2013, the last release of IronPython was
+2.7.3. IronPython is available for Windows and on Linux (via
+`Mono`_).
+
+**PyPy**
+
+`PyPy`_ is an implementation of Python, written in a restricted proper
+subject of Python, `RPython`. I will not go into any further details
+about the implementation here, since that is out of scope for this
+article.
+
+As of this writing PyPy is compatible with Python 2.7.2 and supports
+most of the standard library modules. PyPy is available for Linux, Mac
+OS/X and Windows.
+
+**Others**
+
+There are many more at varying stages of development listed on the
+Python wiki page_.
+
+
+.. _`project website`: http://www.python.org
+.. _`grammar specification`: http://docs.python.org/3/reference/grammar.html
+.. _etc: http://docs.python.org/3/reference/index.html
+.. _`PyPy`: http://pypy.org/
+.. _`Jython`: http://jython.org/
+.. _`IronPython`: http://ironpython.net/
+.. _`.NET`: http://en.wikipedia.org/wiki/.NET_Framework
+.. _`Dynamic Language Runtime`: http://en.wikipedia.org/wiki/Dynamic_Language_Runtime
+.. _`Common Language Runtime`: http://en.wikipedia.org/wiki/Common_Language_Runtime
+.. _`Mono`: http://www.mono-project.com/Python
+.. _page: http://wiki.python.org/moin/PythonImplementations
+.. _`REPL`: http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop
