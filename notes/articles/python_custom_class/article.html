@@ -178,10 +178,12 @@ But, how about being able to do something like <tt class="docutils literal"><spa
 print the distance between the two? This also plays well with our
 intuition of distance in 1 dimension (How far is 5 from 2? 5-2 =
 3). Let&#8217;s try doing that with our current code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">p1</span><span class="o">=</span><span class="n">Point</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p2</span><span class="o">=</span><span class="n">Point</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">p1</span><span class="o">-</span><span class="n">p2</span><span class="p">)</span>
-</pre></div>
+<div class="highlight-python"><pre>&gt;&gt;&gt; p1=Point((1,2,3))
+&gt;&gt;&gt; p2=Point((1,2,3))
+&gt;&gt;&gt; print(p1-p2)
+Traceback (most recent call last):
+File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: unsupported operand type(s) for -: 'Point' and 'Point'</pre>
 </div>
 <p>Of course, Python doesn&#8217;t have any idea what you want it do when you
 ask it to subtract p2 from p1. However, we can tell Python what to do
